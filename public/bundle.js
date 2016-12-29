@@ -19807,7 +19807,11 @@
 	  displayName: 'PersonList',
 
 	  render: function render() {
-	    PersonAPI.getPersons();
+	    PersonAPI.getPersons().then(function (personList) {
+	      alert(personList);
+	    }, function (errorMessage) {
+	      alert(errorMessage);
+	    });
 
 	    return React.createElement(
 	      'div',
@@ -19838,13 +19842,14 @@
 	  getPersons: function getPersons() {
 	    var requestUrl = '' + PERSON_API_URL;
 
-	    axios.get(requestUrl).then(function (res) {
-	      console.log('Success');
+	    return axios.get(requestUrl).then(function (res) {
+	      return res;
+	      //console.log('Success', 'XXXXX');
 	      //alert(res);
 	    }, function (res) {
-	      //throw new Error(res.data.message);
+	      throw new Error('Error While Fetching Person List');
 	      //alert(res);
-	      console.log('Fail');
+	      //console.log('Fail', 'YYYY');
 	    });
 	  }
 

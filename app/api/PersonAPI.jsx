@@ -7,13 +7,14 @@ module.exports = {
   getPersons: function(){
     var requestUrl = `${PERSON_API_URL}`;
 
-    axios.get(requestUrl).then(function(res){
-      console.log('Success');
+    return axios.get(requestUrl).then(function(res){
+      return res;
+      //console.log('Success', 'XXXXX');
       //alert(res);
     },function(res){
-      //throw new Error(res.data.message);
+      throw new Error('Error While Fetching Person List');
       //alert(res);
-      console.log('Fail');
+      //console.log('Fail', 'YYYY');
     });
   }
 

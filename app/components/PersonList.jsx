@@ -3,7 +3,11 @@ var PersonAPI = require('PersonAPI');
 
 var PersonList = React.createClass({
   render: function(){
-    PersonAPI.getPersons();
+    PersonAPI.getPersons().then(function(personList){
+      alert(personList);
+    }, function(errorMessage){
+      alert(errorMessage);
+    });
 
     return (
       <div>
