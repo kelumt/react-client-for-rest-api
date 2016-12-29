@@ -19807,13 +19807,13 @@
 	  displayName: 'PersonList',
 
 	  render: function render() {
-	    /*
-	    PersonAPI.getPersons().then(function(personList){
+
+	    PersonAPI.getPersons().then(function (personList) {
 	      alert(personList);
-	    }, function(errorMessage){
+	    }, function (errorMessage) {
 	      alert(errorMessage);
 	    });
-	    */
+
 	    return React.createElement(
 	      'div',
 	      null,
