@@ -1,6 +1,6 @@
 var axios = require('axios');
 
-const PERSON_API_URL = 'http://agile-scrubland-48539.herokuapp.com/people';
+const PERSON_API_URL = 'https://agile-scrubland-48539.herokuapp.com/people';
 
 module.exports = {
 

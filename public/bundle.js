@@ -19836,7 +19836,7 @@
 
 	var axios = __webpack_require__(161);
 
-	var PERSON_API_URL = 'http://agile-scrubland-48539.herokuapp.com/people';
+	var PERSON_API_URL = 'https://agile-scrubland-48539.herokuapp.com/people';
 
 	module.exports = {
 
