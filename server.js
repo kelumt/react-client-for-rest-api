@@ -3,9 +3,11 @@ var cors = require('cors');
 
 //Create the Application
 var app = express();
+
+const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.static('public'));
 
-app.listen(3000, function(){
-  console.log('Express server is up on port 3000');
+app.listen(PORT, function(){
+  console.log('Express server is up on port ' + PORT);
 });
